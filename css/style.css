@@ -30,7 +30,7 @@ header{
 .container{
     display: flex;
     height: 90%;
-    background-color: aqua;
+    background-color: rgb(142, 250, 222);
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
