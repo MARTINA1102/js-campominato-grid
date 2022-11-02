@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.logo{
+    margin-right: 0.5rem;
+}
+.input-button{
+    margin: 1rem;
+    justify-content: center;
+}
+.choise{
+    margin-right: 0.5rem;
+}
+.container{
+    display: flex;
+    height: 90%;
+    background-color: aqua;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.cell{
+    border: 1px solid black;
+    height: calc((100%-2px)/10);
+    width: calc((100%-2px)/10);
+}
+
+.cell.active{
+    background-color: blue;
+}
+footer{
+    padding:2.5rem 1rem;
+}
