@@ -5,13 +5,45 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 */
 
 const eleGrid=document.querySelector('.grid');
-for (let i=1; i<=100; i++){
-    const eleCell=document.createElement('div');
-    eleCell.classList.add('cell');
-    eleGrid.append(eleCell);
-    eleCell.innerHTML=i;
+const elePlay= document.querySelector ('.play');
+const eleIstruzioni= document.querySelector ('.istruzioni');
+const eleScelta= document.querySelector ('.choise');
+const eleScelta1= document.querySelector ('.choise1');
+const eleScelta2= document.querySelector ('.choise2');
+const eleScelta3= document.querySelector ('.choise3');
 
-    eleCell.addEventListener('click',function(){
-        this.classList.toggle('active')
-    })
-}
+
+
+elePlay.addEventListener('click', function(){
+    eleGrid.innerHTML='';
+    eleGrid.classList.remove('hidden');
+    eleIstruzioni.classList.add('hidden');
+
+    /*let nCelle;
+    switch (eleScelta.value) {
+        case 'livello1':
+            nCelle=100;
+            break;
+        case 'livello2':
+            nCelle=81 
+            break;
+        case 'livello3':
+            nCelle=49 
+            break;
+        
+    }*/
+    let nCelle= parseInt(eleScelta.value);
+
+    const sSquare=Math.sqrt(nCelle);
+    eleGrid.style.setProperty('--square',sSquare);
+    for (let i=1; i<=nCelle; i++){
+        const eleCell=document.createElement('div');
+        eleCell.classList.add('cell');
+        eleGrid.append(eleCell);
+        eleCell.innerHTML=i;
+    
+        eleCell.addEventListener('click',function(){
+            this.classList.toggle('active')
+        })
+    }
+  });

@@ -34,20 +34,28 @@ header{
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
+.istruzioni{
+    margin: auto;
+    text-align: center;
+}
 .grid{
+    --square:10;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     width: 500px;
     height: 500px;
-    border: 1px solid black;
 }
 
 .cell{
     border: 1px solid black;
-    height: calc((100%-2px)/10);
-    width: calc((100%-2px)/10);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100%/var(--square));
+    width: calc(100%/var(--square));
+
 }
 
 .cell.active{
@@ -55,4 +63,7 @@ header{
 }
 footer{
     padding:2.5rem 1rem;
+}
+.hidden{
+    display: none;
 }
